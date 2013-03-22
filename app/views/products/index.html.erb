@@ -1,8 +1,6 @@
-<% lots_of_products = Product.includes(:user).all %>
 <ul>
-<% lots_of_products.each do |p| %>
+<% @products.each do |p| %>
   <li>Product <%=p.name %> costs <%=p.price%>
-  	  Sold by <%=p.user.name%>
   </li>
 <% end %>
 </ul>
